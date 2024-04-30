@@ -64,14 +64,13 @@ HOW TO CREATE NODE APP
     Fn() example: 
 
         app.get(router, callback);
-
-        ```
+        
         app.get('/users', (req, res) => {
             res.status(200).json({
                 message: 'Success'
             })
         })
-        ```
+        
 
     app.js
     
