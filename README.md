@@ -1,12 +1,12 @@
 HOW TO CREATE NODE APP
 
 1. `npm init` - command create package.json (Inside project folder)
-   
 
+    ```
     Project folder (node_basic)
         |
         |_ package.json
-
+    ```
 
     package.json
 
@@ -26,13 +26,13 @@ HOW TO CREATE NODE APP
 
 3. Create app entry point app.js in root path
 
-
+   ```
     Project folder (node_basic)
         |
         |_ package.json
         |
         |_ app.js
-
+   ```
 
 5. Create server by express packages (Express is widely used node framwork pakage)
 
