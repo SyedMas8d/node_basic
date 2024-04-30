@@ -1,6 +1,7 @@
 HOW TO CREATE NODE APP
 
 1. `npm init` - command create package.json (Inside project folder)
+   
 
     Project folder (node_basic)
         |
@@ -23,7 +24,8 @@ HOW TO CREATE NODE APP
     }
     ```
 
-2. Create app entry point app.js in root path
+3. Create app entry point app.js in root path
+
 
     Project folder (node_basic)
         |
@@ -32,7 +34,7 @@ HOW TO CREATE NODE APP
         |_ app.js
 
 
-3. Create server by express packages (Express is widely used node framwork pakage)
+5. Create server by express packages (Express is widely used node framwork pakage)
 
     1. Install express package
 
@@ -52,7 +54,7 @@ HOW TO CREATE NODE APP
         })
         ``` 
 
-4. Write apis using app
+6. Write apis using app
     1. app.get()
     2. app.post()
     3. app.put()
@@ -91,7 +93,7 @@ HOW TO CREATE NODE APP
     })
     ```
 
-5. Run apis
+7. Run apis
     1. Add start script in package.json
 
     package.jsons
