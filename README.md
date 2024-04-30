@@ -1,4 +1,3 @@
-# node_basic
 HOW TO CREATE NODE APP
 
 1. `npm init` - command create package.json (Inside project folder)
@@ -125,5 +124,70 @@ UNDERSTAND THE REQUEST RESPONSE IN NODE APP
     2. body 
     3. path param
 
+    To proccess the request body we need to add body parser 
+
+    Add following code in app.js
+
+    ```
+    app.use(express.json());
+
+    app.get('/data', (req, res) => {
+
+    return res.status(200).json({
+            message: 'Success',
+            data: {
+                query: req.query,
+                body: req.body
+            }
+        })
+    })
+    ```
     
+    Final app.js
     
+    ```
+    const express = require('express')
+    const app = express()
+
+    // It will parese the request body (So we can fetch req data req.body)
+    app.use(express.json());
+
+    // Create Server In Any port
+    app.listen(3000, () => {
+        console.log('Server Create In 3000 Port')
+    })
+
+    // Write get api /users endpoint
+    app.get('/users', (req, res) => {
+
+        return res.status(200).json({
+            message: 'Success'
+        })
+    })
+
+    app.get('/data', (req, res) => {
+
+        return res.status(200).json({
+            message: 'Success',
+            data: {
+                query: req.query,
+                body: req.body
+            }
+        })
+    })
+    ```
+
+2. Restart the server (To code update)
+
+    Test the url: http://localhost:3000/data
+
+    Use following CURL
+
+    ```
+    curl --location --request GET 'http://localhost:3000/data?name=query_param' \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "name": "body param"
+    }'
+    ```
+
